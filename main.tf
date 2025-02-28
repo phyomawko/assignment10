@@ -26,5 +26,8 @@ module "data" {
   dbsubnet1 = module.vpc.pri_subnet1_id
   dbsubnet2 = module.vpc.pri_subnet2_id
   db_sg_id = module.vpc.db_sg_id
+  db_name = "mydb"
+  db_username = "admin"
+  db_password = "password"
 }
 

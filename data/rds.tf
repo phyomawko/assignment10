@@ -4,9 +4,9 @@ resource "aws_db_instance" "ass10_rds" {
     engine               = "mysql"
     engine_version       = "8.0"
     instance_class       = "db.t3.micro"  # Free tier eligible instance class
-    db_name              = "pmk"
-    username             = "admin"
-    password             = "password"
+    db_name              = var.db_name
+    username             = var.db_username
+    password             = var.db_password
     parameter_group_name = "default.mysql8.0"
     skip_final_snapshot  = true
     db_subnet_group_name = aws_db_subnet_group.ass10_rds_subnet_group.name  
